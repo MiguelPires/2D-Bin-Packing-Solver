@@ -1,12 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;
-;;; Grupo 15
-;;;
-;;; 	68593 - André Pires
-;;; 	76433 - Miguel Pires
-;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (in-package :user)
 (eval-when (:compile-toplevel :load-toplevel :execute)
 
@@ -234,7 +225,7 @@
         (t (format t "The search strategy '~A' doesn't exist~%" search)
         	(return-from place-pieces)))
 
-	;(desenha-tabuleiro (estado-pecas-postas estado-resultado))		; NOTA: desenha as pecas para debug visual
+	;(draw-board (estado-pecas-postas estado-resultado))		; NOTA: desenha as pecas para debug visual
 	;(format t "Nos expandidos: ~A~%" *nos-expandidos*)				; NOTA: estes valores permitem comparar a
 	;(format t "Nos gerados: ~A~%" *nos-gerados*)					; performance dos algoritmos/heuristicas
 
@@ -852,7 +843,7 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun desenha-tabuleiro (lista-pecas)
+(defun draw-board (lista-pecas)
 	(let* ((elemento-default "[]")
 		(matrix (make-array (list *width* *height*) :initial-element elemento-default))
 		(numPeca 1))
@@ -892,7 +883,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
-;;;		Have solution
+;;;		Easy problems
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -995,7 +986,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
-;;;		Have tight solution
+;;;		Hard problems
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -1100,7 +1091,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
-;;;		Don't have a solution
+;;;		Impossible problems
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
